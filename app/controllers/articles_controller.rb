@@ -40,7 +40,6 @@ class ArticlesController < ApplicationController
     if article
       article.destroy
       render json: { message: "deleted" }
-      # head :no_content
     else
       render json: { error: "Article not found" }, status: :not_found
     end
